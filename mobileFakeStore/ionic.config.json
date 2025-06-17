@@ -1,0 +1,7 @@
+{
+  "name": "mobileFakeStore",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

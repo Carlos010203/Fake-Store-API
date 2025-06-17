@@ -1,0 +1,27 @@
+<div class="product-page">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Product Details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div *ngIf="product">
+      <ion-card>
+        <img [src]="product.image" alt="{{ product.title }}" />
+        <ion-card-header>
+          <ion-card-title>{{ product.title }}</ion-card-title>
+          <ion-card-subtitle>{{ product.category }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ product.description }}</p>
+          <p>Price: {{ product.price | currency }}</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-button expand="full" (click)="addToCart(product)">Add to Cart</ion-button>
+    </div>
+    <div *ngIf="!product">
+      <p>Loading product details...</p>
+    </div>
+  </ion-content>
+</div>

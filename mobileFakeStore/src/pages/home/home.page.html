@@ -1,0 +1,16 @@
+<div class="home-page">
+  <h1>Bem-vindo à Fake Store</h1>
+  <p>Explore nossos produtos incríveis!</p>
+  <ion-list>
+    <ion-item *ngFor="let product of products" (click)="viewProduct(product.id)">
+      <ion-thumbnail slot="start">
+        <img [src]="product.image" alt="{{ product.title }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ product.title }}</h2>
+        <p>{{ product.description }}</p>
+        <h3>{{ product.price | currency }}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
